@@ -1,0 +1,57 @@
+footer {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    background: black;
+    color: #898989;
+    font-size: 11px;
+    font-family: 'Roboto', sans-serif;
+    border-top: 1px solid #0024ff;
+    border-image-source: linear-gradient(-90deg, #0024ff 0%, #de00ff 49%, #ff2e50 100%);
+    border-image-slice: 20;
+    img {
+        max-width: 100%;
+    }
+    .f-content {
+        width: 130rem;
+        margin: 0 auto;
+        @include device-1() {
+            width: 100%;
+        }
+        .footer-left {
+            display: inline-block;
+            width: 10%;
+            vertical-align: top;
+            .f-logo-mb {
+                display: none;
+            }
+            @include device-1() {
+                width: 100%;
+                text-align: center;
+                .f-logo-mb {
+                    width: 32rem;
+                    display: inline-block;
+                }
+                .f-logo-desktop {
+                    display: none;
+                }
+            }
+        }
+        .footer-center {
+            display: inline-block;
+            width: 80%;
+            margin-left: 1%;
+            margin-right: 1%;
+            text-align: justify;
+            @include device-1() {
+                width: 100%;
+                margin: 0;
+                padding: 3rem;
+            }
+        }
+        .footer-right {
+            display: inline-block;
+            width: 7%;
+            vertical-align: top;
+        }
+    }
+}

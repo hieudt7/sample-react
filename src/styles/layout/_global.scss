@@ -1,0 +1,239 @@
+.hide-on-pc {
+    display: none !important;
+
+    @include device-1() {
+        display: block !important;
+    }
+}
+
+.hide-on-mobile {
+    @include device-1() {
+        display: none !important;
+    }
+}
+
+a {
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+
+    img {
+        transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn-img {
+    img {
+        transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+    }
+
+    &:hover {
+        img {
+            transform: scale(0.85);
+        }
+    }
+}
+
+.skew-btn-action {
+    width: 210px;
+    line-height: 52px;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    background: linear-gradient(90deg, #9503e5, #3d045b);
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 8px;
+    transition: all ease-in 0.3s;
+    font-weight: 400;
+    z-index: 9;
+    border-radius: 30px;
+
+    &.disabled {
+        pointer-events: none;
+        filter: grayscale(1);
+    }
+
+    @include device-1() {
+        width: 150px;
+        line-height: 34px;
+        border-left: 6px solid #fff;
+        font-size: 16px;
+    }
+
+    span {
+        display: inline-block;
+    }
+
+    &:hover,
+    &.active {
+        transform: scale(0.8);
+        text-decoration: none;
+    }
+
+    &.skew-white {
+        background-color: #fff;
+        color: #0b33e1;
+        border-right: 15px solid #0b33e1;
+
+        @include device-1() {
+            border-left: 6px solid #0b33e1;
+        }
+    }
+
+    &.skew-red {
+        background-color: #b41d23;
+        color: #fff;
+        border: 1px solid #ff5c50;
+    }
+}
+
+.fire-success {
+    padding-bottom: 30px;
+
+    .tab-content {
+        padding: 30px;
+    }
+}
+
+.checkbox-custom {
+    position: relative;
+    display: inline-block;
+
+    @include device-1() {
+        font-size: 14px;
+    }
+
+    label {
+        padding-left: 40px !important;
+    }
+
+    [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+        position: absolute;
+        left: -9999px;
+    }
+
+    [type="checkbox"]:not(:checked)+label,
+    [type="checkbox"]:checked+label {
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    /* checkbox aspect */
+    [type="checkbox"]:not(:checked)+label:before,
+    [type="checkbox"]:checked+label:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 25px;
+        height: 25px;
+        border: 1px solid #0011e4;
+        border-radius: 2px;
+    }
+
+    /* checked mark aspect */
+    [type="checkbox"]:not(:checked)+label:after,
+    [type="checkbox"]:checked+label:after {
+        content: '';
+        position: absolute;
+        background-image: url('https://cdn.vn.garenanow.com/web/fo3/fo4/club/images/clanWar/check-shape.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+        color: #09ad7e;
+        transition: all .2s;
+        top: 3px;
+        left: 5px;
+    }
+
+    /* checked mark aspect changes */
+    [type="checkbox"]:not(:checked)+label:after {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    [type="checkbox"]:checked+label:after {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    /* disabled checkbox */
+    [type="checkbox"]:disabled:not(:checked)+label:before,
+    [type="checkbox"]:disabled:checked+label:before {
+        box-shadow: none;
+        border-color: #bbb;
+        background-color: #ddd;
+    }
+}
+
+.btn-gradient-1 {
+    display: inline-block;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(90deg, #821758, #720894 49%, #291393);
+    font-family: 'Roboto-Condensed', sans-serif;
+    font-style: italic;
+    border-radius: 10px;
+    margin: 10px;
+}
+.btn-gradient-2 {
+    display: inline-block;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    min-width: 200px;
+    background: linear-gradient(90deg, #120940, #30053f 49%, #360b26);
+    border: 1px solid red;
+    border-image-source: linear-gradient(90deg, #0024ff, #de00ff 49%, #ff2e50);
+    border-image-slice: 20;
+    font-family: 'Roboto-Condensed', sans-serif;
+    font-style: italic;
+    border-radius: 3px;
+    margin: 10px;
+}
+.gl-btn-blue{
+    display: inline-block;
+    color: #fff;
+    font-weight: 300;
+    padding: 10px 20px;
+    background-color: #0063ea;
+    margin: 0 5px;
+    min-width: 116px;
+    text-align: center;
+}
+.gl-btn-pink{
+    display: inline-block;
+    color: #fff;
+    font-weight: 300;
+    padding: 10px 20px;
+    background-color: #ef1b88;
+    margin: 0 5px;
+    min-width: 116px;
+    text-align: center;
+}
+.gl-btn-purple{
+    display: inline-block;
+    color: #fff;
+    font-weight: 300;
+    padding: 10px 20px;
+    background-color: #c700f5;
+    margin: 0 5px;
+    min-width: 116px;
+    text-align: center;
+}

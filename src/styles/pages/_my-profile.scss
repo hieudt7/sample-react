@@ -1,0 +1,49 @@
+main {
+    background-color: #fff;
+    min-height: 100vh;
+
+ 
+    .search-input{
+        position: relative;
+        width: 650px;
+        margin: 0 auto;
+        margin-top: -20px;
+        i{
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            color: #a1a9be;
+            font-size: 20px;
+        }
+        input{
+            border-radius: 30px;
+            height: 40px;
+            padding: 15px;
+            font-size: 18px;
+            padding-left: 30px;
+            &:focus{
+                border: 1px solid #1aa1ff;
+            }
+        }
+    }
+    .user-info{
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 40px;
+        font-size: 14px;
+        .name{
+            margin: 20px 0;
+        }
+        a{
+            color: #3f5dd2;
+        }
+        i{
+            margin-right: 10px;
+        }
+    }
+}
+.top-banner {
+    background-color: #edf4fc;
+    height: 300px;
+    padding-top: 150px;
+}
