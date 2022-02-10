@@ -100,7 +100,7 @@
     "html-webpack-plugin": "^2.24.1",
     "jest": "^24.8.0",
     "mocha": "^3.2.0",
-    "node-sass": "^4.5.3",
+    "node-sass": "^7.0.0",
     "phantomjs-prebuilt": "^2.1.14",
     "react-dom": "^16.8.6",
     "react-test-renderer": "^15.6.2",
